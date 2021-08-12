@@ -1,0 +1,16 @@
+<div class="row-cols-3 m-5">
+  <h1 class="m-5">Crée votre nouveau short !</h1>
+  <div class="mb-3">
+    <label for="input1" class="form-label">Nom</label>
+    <input  type="text" class="form-control" id="Input1" placeholder="Nom de votre short" #name>
+  </div>
+  <div class="mb-3">
+    <label for="input2" class="form-label">couleur</label>
+    <input  type="text" class="form-control" id="input2" placeholder="Couleur de votre short" #color>
+  </div>
+  <div class="mb-3">
+    <label for="input3" class="form-label">Taille</label>
+    <input  type="text" class="form-control" id="input3" placeholder="Taille de votre short" #size>
+  </div>
+  <button (click)="createShort(name.value, color.value, size.value)" class="btn btn-success">Ajouter</button>
+</div>

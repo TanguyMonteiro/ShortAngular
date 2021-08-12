@@ -1,0 +1,20 @@
+
+<div class="d-flex">
+<div  *ngFor="let short of stock" >
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7b41c2fd-a81d-424c-9da3-136b367400cc/short-tisse-sportswear-pour-VTjmMs.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{short.name}}</h5>
+      <p class="card-text">Couleur : {{short.color}}</p>
+      <p class="card-text">Taille : {{short.size}}</p>
+      <p class="card-text">prix : {{short.price}}€</p>
+
+      <input  type="number" #quantity>
+
+      <button class="btn btn-outline-danger" (click)="deleteShort(short.id)">supprimer ce short</button>
+      <button class="btn btn-primary" (click)="addPanier(short , quantity.value)">Acheter ce short</button>
+    </div>
+  </div>
+</div>
+</div>
+

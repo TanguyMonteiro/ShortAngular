@@ -1,0 +1,27 @@
+
+<table class="table table-light">
+  <thead>
+  <tr>
+
+    <th scope="col">Nom</th>
+
+    <th scope="col">Quantité</th>
+    <th scope="col">Prix</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let short of panierRange">
+    <td>{{short.name}}</td>
+
+    <td>{{short.quantite}}</td>
+
+    <td>{{short.price}}</td>
+
+   <td><button class="btn btn-danger" (click)="deleteShortFromPanier(short)">Supprimer</button></td>
+  </tr>
+
+  </tbody>
+</table>
+<p>total : {{totalprice()}} </p>
+
